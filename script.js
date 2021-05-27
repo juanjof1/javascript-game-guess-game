@@ -1,6 +1,6 @@
 let randomNumber = match.floor(match.random() * 100) + 1;
 const guesses = document.querySelector('.guesses');
-const lasResult = document.querySelector('.lastResult');
+const lastResult = document.querySelector('.lastResult');
 const lowOrhi = document.querySelector('lowOhi');
 
 const guessSubmit = document.querySelector('.guessSubmit');
@@ -19,11 +19,11 @@ function checkGuess() {
      
      
  } else if(guessCount === 10) {
-     lasResult.textContent = 'Game is over';
+     lastResult.textContent = 'Game is over';
      setGamerOver()
  } else{
-     lasResult.textContent = 'Wrong';
-     lasResult.style.backgroundColor = 'red';
+     lastResult.textContent = 'Wrong';
+     lastResult.style.backgroundColor = 'red';
      if (userGuess < randomNumber) {
          lowOrhi.textContent = 'Too low';
 
@@ -65,7 +65,7 @@ function resertGame(){
    guessfield.value ='';
    guessfield.focus();
 
-   lasResult.style.backgroundColor = 'White';
+   lastResult.style.backgroundColor = 'White';
 
    randomNumber = Math.floor(Math.random() * 100) + 1;
 }
